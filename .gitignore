@@ -1,0 +1,31 @@
+# Local environments, credentials and caches.
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+.env.*
+.aws/
+*.pem
+*.key
+catboost_info/
+
+# Operating-system files and temporary output.
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+
+# User inputs and outputs from the documented commands.
+task 1 context aware trees/inputs/
+task 1 context aware trees/outputs/
+task 2/reproduced_results/
+task 2/reproduced_analysis/
+task 2/raw_data/
+task 1 context aware trees/benchmark_scratch/
+
+# Generated analysis figures and findings.
+task 2/analysis_context_trees/figures/
+task 2/analysis_context_trees/findings.html

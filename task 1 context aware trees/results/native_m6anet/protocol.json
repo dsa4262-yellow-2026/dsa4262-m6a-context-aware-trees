@@ -1,0 +1,39 @@
+{
+  "checkpoint": "HCT116_RNA002",
+  "python": "3.8.20",
+  "versions": {
+    "m6anet": "2.1.0",
+    "torch": "1.6.0",
+    "numpy": "1.24.4",
+    "pandas": "1.5.3",
+    "scikit-learn": "1.3.2"
+  },
+  "fold": 0,
+  "seed": 4262,
+  "num_iterations": 1000,
+  "sampled_reads_per_iteration": 20,
+  "processes": 2,
+  "batch_size": 1024,
+  "sampling": "Native m6anet 2.1.0 Monte Carlo sampling with replacement; worker randomness can vary by platform.",
+  "adaptation": "Nine signals unchanged; original numeric positions; appended synthetic within-site read indices.",
+  "normalization": "Official bundled motif-specific normalization; no fitting on evaluated sites.",
+  "training_overlap": "Unknown: the official HCT116 checkpoint may overlap the course data; this is a reference comparison.",
+  "datasets": [
+    {
+      "dataset": "data0",
+      "selected_sites": 25682,
+      "eligible_sites": 25682,
+      "below_20_reads": 0,
+      "predicted_sites": 25682
+    },
+    {
+      "dataset": "data1",
+      "selected_sites": 18462,
+      "eligible_sites": 18462,
+      "below_20_reads": 0,
+      "predicted_sites": 18462
+    }
+  ],
+  "status": "complete",
+  "seconds": 320.8279999999795
+}

@@ -1,0 +1,7 @@
+numpy==1.26.4
+pandas==2.1.4
+pyarrow==21.0.0
+scipy==1.14.1
+matplotlib==3.8.0
+psutil==5.9.0
+joblib==1.2.0

@@ -1,0 +1,10 @@
+min_reads,score_threshold,eligible_human_observations,common_supported_positions,all_replicates_observed_positions,candidate_positions,candidate_genes,baseline_candidates,baseline_candidates_retained,baseline_candidates_lost,new_candidates,lost_coverage,lost_score
+20,0.5,2973240,33452,26024,181,105,181,181,0,0,0,0
+20,0.7,2973240,33452,26024,18,13,18,18,0,0,0,0
+20,0.9,2973240,33452,26024,0,0,0,0,0,0,0,0
+30,0.5,1946653,20993,16647,129,70,181,126,55,3,54,1
+30,0.7,1946653,20993,16647,22,16,18,17,1,5,1,0
+30,0.9,1946653,20993,16647,0,0,0,0,0,0,0,0
+50,0.5,1097126,11560,9429,88,48,181,86,95,2,95,0
+50,0.7,1097126,11560,9429,20,17,18,12,6,8,6,0
+50,0.9,1097126,11560,9429,0,0,0,0,0,0,0,0
