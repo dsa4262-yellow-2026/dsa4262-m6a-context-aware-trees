@@ -1,0 +1,4 @@
+cohort,positions,reference_unmatched_positions,complete_static_context_positions,missing_stop_distance,missing_previous_motif,missing_next_motif,missing_exon_features,missing_flank_features,eligible_run_observations,background_incomplete_observations,all_context_complete_observations
+common,33452,0,30530,1728,507,795,0,133,717057,0,654483
+shared_candidates,181,0,169,11,1,0,0,0,3970,0,3712
+examples,9,0,5,3,0,1,0,0,50,0,30

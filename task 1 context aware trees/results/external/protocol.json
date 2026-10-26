@@ -1,0 +1,129 @@
+{
+  "model": "Context-aware trees",
+  "version": "1",
+  "full_weight": 0.45,
+  "local_weight": 0.55,
+  "training_datasets": [
+    0,
+    1,
+    2
+  ],
+  "seeds": [
+    4262,
+    4263,
+    4264
+  ],
+  "deployment_seed": 4262,
+  "role": "External development comparison; labels informed recipe and blend selection, not gradient or tree fitting.",
+  "genomic_keys": [
+    "chromosome",
+    "genomic_position_0based",
+    "strand"
+  ],
+  "panels": [
+    {
+      "panel": "eligos_mouse/MeRIP-seq",
+      "file": "eligos_mouse__MeRIP-seq.csv.gz",
+      "observations": 2763,
+      "positives": 366,
+      "species": "mouse",
+      "scope": "Orthogonal assay labels on common genomic sites; unlabelled sites are excluded from metrics.",
+      "singlemod": "Published-model comparator with training-overlap limitations; not an independent human generalization benchmark."
+    },
+    {
+      "panel": "eligos_mouse/miCLIP",
+      "file": "eligos_mouse__miCLIP.csv.gz",
+      "observations": 2763,
+      "positives": 246,
+      "species": "mouse",
+      "scope": "Orthogonal assay labels on common genomic sites; unlabelled sites are excluded from metrics.",
+      "singlemod": "Published-model comparator with training-overlap limitations; not an independent human generalization benchmark."
+    },
+    {
+      "panel": "eligos_mouse/miCLIP2",
+      "file": "eligos_mouse__miCLIP2.csv.gz",
+      "observations": 2763,
+      "positives": 365,
+      "species": "mouse",
+      "scope": "Orthogonal assay labels on common genomic sites; unlabelled sites are excluded from metrics.",
+      "singlemod": "Published-model comparator with training-overlap limitations; not an independent human generalization benchmark."
+    },
+    {
+      "panel": "mouse_zhong_wt/primary_label",
+      "file": "mouse_zhong_wt__primary_label.csv.gz",
+      "observations": 1739,
+      "positives": 683,
+      "species": "mouse",
+      "scope": "Orthogonal assay labels on common genomic sites; unlabelled sites are excluded from metrics.",
+      "singlemod": "Published-model comparator with training-overlap limitations; not an independent human generalization benchmark."
+    },
+    {
+      "panel": "hela_native_1/matched_native_vs_IVT",
+      "file": "hela_native_1__matched_native_vs_IVT.csv.gz",
+      "observations": 290,
+      "positives": 145,
+      "species": "human",
+      "scope": "Same-locus native supported positives versus IVT controls; tests condition separation, not general native-cell site classification.",
+      "singlemod": "Published-model comparator with training-overlap limitations; not an independent human generalization benchmark."
+    },
+    {
+      "panel": "hela_native_2/matched_native_vs_IVT",
+      "file": "hela_native_2__matched_native_vs_IVT.csv.gz",
+      "observations": 248,
+      "positives": 124,
+      "species": "human",
+      "scope": "Same-locus native supported positives versus IVT controls; tests condition separation, not general native-cell site classification.",
+      "singlemod": "Published-model comparator with training-overlap limitations; not an independent human generalization benchmark."
+    }
+  ],
+  "aggregation": "Read-count weighted transcript predictions at genomic position and strand; reject inconsistent central five-mers. Identical common sites for every method.",
+  "m6anet": "Released HCT116 RNA002 checkpoint; exact expectation of its 20-read sampling. Ranking uses negative log survival to avoid numerical saturation.",
+  "metrics": "ROC AUC, trapezoidal precision-recall AUC, and average precision. Three-seed means describe training sensitivity, not confidence intervals.",
+  "inputs": [
+    {
+      "id": "eligos_mouse",
+      "name": "ELIGOS mouse",
+      "accession": "SRR11550233",
+      "species": "mouse",
+      "raw_reads": 256000,
+      "input_sites": 8568,
+      "input_bytes": 22250594
+    },
+    {
+      "id": "mouse_zhong_wt",
+      "name": "Zhong mouse",
+      "accession": "SRR17803872",
+      "species": "mouse",
+      "raw_reads": 256000,
+      "input_sites": 21992,
+      "input_bytes": 57814967
+    },
+    {
+      "id": "hela_native_1",
+      "name": "HeLa native 1",
+      "accession": "SRR22630809",
+      "species": "human",
+      "raw_reads": 160000,
+      "input_sites": 6769,
+      "input_bytes": 13829907
+    },
+    {
+      "id": "hela_native_2",
+      "name": "HeLa native 2",
+      "accession": "SRR22582391",
+      "species": "human",
+      "raw_reads": 160000,
+      "input_sites": 6119,
+      "input_bytes": 14519663
+    },
+    {
+      "id": "hela_ivt_1",
+      "name": "HeLa IVT control",
+      "accession": "SRR22582389",
+      "species": "human",
+      "raw_reads": 160000,
+      "input_sites": 7055,
+      "input_bytes": 15952563
+    }
+  ]
+}
