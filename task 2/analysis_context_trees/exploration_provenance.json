@@ -1,0 +1,44 @@
+{
+  "inputs": [
+    {
+      "name": "samples.csv",
+      "bytes": 9634,
+      "sha256": "d0bd5b5bf1d6d1d5e7bf181fa9db908664ddc36a36e0105106195e1bc75893ec"
+    },
+    {
+      "name": "reference.joblib",
+      "bytes": 72689072,
+      "sha256": "978cbc4d14faa7cc02dc7a6f0d7bba2eecb07f4f291846c8ab89f209cd29fcbe"
+    },
+    {
+      "name": "metadata.json",
+      "bytes": 7051,
+      "sha256": "2120873dad6b789a949abdaad22b78ee521a2143929622a1e02a91787da2321b"
+    },
+    {
+      "name": "biological_sites.parquet",
+      "bytes": 82138424,
+      "sha256": "05b283de5ff585731b5b936f970c91efadd4f8708a2aa128882070b2b73488fb"
+    },
+    {
+      "name": "shared_sites.parquet",
+      "bytes": 4350961,
+      "sha256": "e99f495bbdd254a78cc85a8e1b736d36c961815e69a4ee00f0a8c3eb181d0b41"
+    },
+    {
+      "name": "explore.py",
+      "bytes": 34851,
+      "sha256": "da2d4eb5602e8ecd66b98ca65d47c8abcbeaf922bf3e32a12dacb2263c434f5f"
+    }
+  ],
+  "seed": 4262,
+  "python": "3.11.7",
+  "pandas": "2.1.4",
+  "numpy": "1.26.4",
+  "signal_selection": "At most 200 high/low pairs per biological sample and prespecified motif; exact seven-mer and <=2-fold biological mean depth; all reads in every eligible contributing technical run.",
+  "rendering_sources": {
+    "scientific_figures.py": "e9337743727f55658440279b339e4174bf4551df3eb7403964f5618ae65f93fe",
+    "report_panels.py": "a45d97c53766178a3dedd1c5121cbc2014164184b3b0956adf55a7817058710f",
+    "questions.py": "a232dff5f55a73fc9b229dec21897a06ddffc9643436df6572e9a3a2441fcc4e"
+  }
+}

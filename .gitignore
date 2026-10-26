@@ -1,0 +1,57 @@
+# Local environments, credentials and caches.
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+.env.*
+.aws/
+*.pem
+*.key
+catboost_info/
+
+# Operating-system files and temporary output.
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+
+# Standalone documents and their build sources.
+*.tex
+*.bib
+*.sty
+*.cls
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.synctex.gz
+latexmkrc
+*.docx
+*.pptx
+Task2_Method.*
+Task2_Report.*
+Task2_LaTeX.zip
+Task1_Method.*
+Task1_Report.*
+Task1_LaTeX.zip
+.work/
+.history/
+.ruff_cache/
+
+# User inputs and outputs from the documented commands.
+task 1 context aware trees/inputs/
+task 1 context aware trees/outputs/
+task 2/reproduced_results/
+task 2/reproduced_analysis/
+task 2/raw_data/
+task 2/exported_predictions/
+task 2/results_context_trees/*/predictions.csv.gz
+task 1 context aware trees/benchmark_scratch/
+
+# Generated analysis figures and findings.
+task 2/analysis_context_trees/figures_scientific/
+task 2/analysis_context_trees/figures_report/
+task 2/analysis_context_trees/README.md

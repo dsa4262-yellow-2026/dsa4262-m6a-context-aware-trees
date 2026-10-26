@@ -1,0 +1,4 @@
+score_threshold,original_common,retained_common,original_shared,original_shared_on_retained,without_overlap_shared,lost_observation,lost_score,gained_score,hct116_rep3_mean_absolute_change
+0.5,26024,25962,181,181,181,0,0,0,0.010189648161351305
+0.7,26024,25962,18,18,18,0,0,0,0.010189648161351305
+0.9,26024,25962,0,0,0,0,0,0,0.010189648161351305

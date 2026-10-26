@@ -1,0 +1,16 @@
+name: task1-m6anet
+channels:
+  - conda-forge
+  - bioconda
+  - pytorch
+  - nodefaults
+dependencies:
+  - python=3.8
+  - m6anet=2.1.0
+  - pytorch=1.6.0=*cpu*
+  - numpy=1.24.4
+  - pandas=1.5.3
+  - scipy=1.10.1
+  - scikit-learn=1.3.2
+  - joblib=1.3.2
+  - mkl<2024

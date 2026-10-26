@@ -1,0 +1,51 @@
+{
+  "name": "Context-aware trees",
+  "version": "1",
+  "full_weight": 0.45,
+  "local_weight": 0.55,
+  "depth": 7,
+  "regularization": 25,
+  "xgb_rounds": 800,
+  "cat_rounds": 960,
+  "learning_rate": 0.03,
+  "context_feature_weight": 0.2,
+  "column_fraction": 0.5,
+  "order_weight": 1.0,
+  "binary_partners": 4,
+  "query_size": 1024,
+  "mode": "samples",
+  "runs": [
+    {
+      "fold": 0,
+      "seed": 4262,
+      "training_sites": 90810,
+      "held_out_sites": 121838,
+      "ordered_training_sites": 1323,
+      "held_out_sample": 0,
+      "training_binary_sample": 1,
+      "retained_sites": 60919,
+      "coverage_retained_sites": 61987,
+      "coverage_threshold": 47.0
+    },
+    {
+      "fold": 1,
+      "seed": 4263,
+      "training_sites": 121838,
+      "held_out_sites": 90810,
+      "ordered_training_sites": 1323,
+      "held_out_sample": 1,
+      "training_binary_sample": 0,
+      "retained_sites": 45405,
+      "coverage_retained_sites": 45430,
+      "coverage_threshold": 40.0
+    }
+  ],
+  "component_order": [
+    "local_xgboost",
+    "full_catboost"
+  ],
+  "scope": "Train on the other complete binary sample and Dataset 2. Shared genes and coordinates are allowed; held-out sample labels are excluded from all fitting.",
+  "context_checks": "Keep half the held-out sites, or sites at or above median coverage; recompute only observed other-site context. Compare the same retained sites with their full-context scores.",
+  "selection": "Architecture and blend weight were selected using internal and external development comparisons; fitted parameters use Datasets 0–2.",
+  "ordering": "Dataset 2 levels specify within-position order, not calibrated site probabilities."
+}

@@ -1,0 +1,117 @@
+{
+  "completed_runs": 23,
+  "completed_cell_lines": 7,
+  "eligible_human_cell_lines": 7,
+  "missing_runs": [],
+  "complete": true,
+  "min_reads": 20,
+  "model": "context_aware_trees_v1",
+  "full_weight": 0.45,
+  "local_weight": 0.55,
+  "dependencies": {
+    "numpy": "1.26.4",
+    "pandas": "2.1.4",
+    "pyarrow": "21.0.0",
+    "scipy": "1.14.1",
+    "joblib": "1.2.0"
+  },
+  "evidence": {
+    "coverage_thresholds": [
+      20,
+      30,
+      50
+    ],
+    "score_thresholds": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "coverage_rule": "Reapply depth to each original run, then rebuild biological and cell means; frozen model scores are unchanged.",
+    "retained_position_comparison": "For each cell pair and higher read cutoff, compare primary and current excess on their coordinate intersection; separately count retained, lost and newly qualifying positions. Empty comparisons retain zero counts and unavailable contrasts.",
+    "example_stability": "Keep the primary discovery-selected transcript, cell pair and coordinate list fixed; report retained positions at each depth.",
+    "confirmation_summary": "One highest-discovery-magnitude comparison per gene, taken from the full discovery ranking; zeros and reversals do not retain direction.",
+    "annotation": "Same fixed Ensembl 91 reference as the model; zero-based half-open intervals; stop codons precede CDS in region assignment.",
+    "region_background": "Positions observed in every declared biological replicate before the score cutoff, and the subset in shared-candidate genes. Counts are transcript positions, not unique genomic bases.",
+    "region_gene_weighting": "For each candidate gene, multiply its candidate count by its eligible-position 3-prime UTR fraction, then sum; dividing by total candidate count gives a background with the same gene contributions.",
+    "candidate_turnover": "Loss of observation in any declared biological replicate is a coverage loss; a fully observed baseline candidate below the score cutoff is a score loss. Both use the same score cutoff as the baseline.",
+    "individual_confirmation": "For the three discovery-selected examples, retain each remaining biological-replicate pair, its available original positions and signed mean contrast; sample pairs can share replicates."
+  },
+  "observed_sites": 28670080,
+  "eligible_site_observations": 2983948,
+  "declared_runs": [
+    "SGNex_A549_directRNA_replicate5_run1",
+    "SGNex_A549_directRNA_replicate6_run1",
+    "SGNex_H9_directRNA_replicate2_run1",
+    "SGNex_H9_directRNA_replicate2_run2",
+    "SGNex_H9_directRNA_replicate3_run1",
+    "SGNex_H9_directRNA_replicate3_run2",
+    "SGNex_H9_directRNA_replicate4_run1",
+    "SGNex_H9_directRNA_replicate4_run2",
+    "SGNex_HEYA8_directRNA_replicate1_run1",
+    "SGNex_HEYA8_directRNA_replicate1_run2",
+    "SGNex_HEYA8_directRNA_replicate2_run1",
+    "SGNex_HEYA8_directRNA_replicate2_run2",
+    "SGNex_HEYA8_directRNA_replicate3_run1",
+    "SGNex_Hct116_directRNA_replicate3_run1",
+    "SGNex_Hct116_directRNA_replicate3_run4",
+    "SGNex_Hct116_directRNA_replicate4_run3",
+    "SGNex_HepG2_directRNA_replicate5_run2",
+    "SGNex_HepG2_directRNA_replicate6_run1",
+    "SGNex_K562_directRNA_replicate4_run1",
+    "SGNex_K562_directRNA_replicate5_run1",
+    "SGNex_K562_directRNA_replicate6_run1",
+    "SGNex_MCF7_directRNA_replicate3_run1",
+    "SGNex_MCF7_directRNA_replicate4_run1"
+  ],
+  "eligible_human_site_observations": 2973240,
+  "scope": "Context-aware trees: 23 of 23 declared processed runs, 7 cell lines, 17 biological replicates.",
+  "coordinates": "Original input keys are retained in per-run prediction tables. Analysis maps only explicitly verified transcript version aliases to the fixed reference IDs, preserving input_transcript_id and input_transcript_position; analysis positions use canonical integer strings and matched seven-mers must agree.",
+  "transcript_aliases": {
+    "file": "transcript_aliases.csv",
+    "verified_ids": 46297,
+    "audit": "Exact version headers and full sequences match the fixed Ensembl 91 reference. Unlisted IDs remain unchanged."
+  },
+  "human_rule": "ENST transcript IDs. SIRV, ERCC and R1_/R2_ sequin IDs are synthetic; other nonhuman IDs are separately counted.",
+  "aggregation": "Mean available eligible technical runs at each coordinate, then mean available biological replicates. No coverage weighting or missing-to-zero imputation. Support counts accompany every aggregate.",
+  "depth_comparison": "Primary matched_replicates comparisons require at least two biological replicates per cell and a maximum/minimum biological-replicate mean read-depth ratio no greater than 2 across both cells.",
+  "matched_variation": "At each matched position, average absolute differences over all cross-cell biological-replicate pairs. Within each cell, average all distinct biological-replicate pairs, then give the two cells equal weight. Average both quantities over the same positions.",
+  "discovery_replicates": {
+    "A549": "SGNex_A549_directRNA_replicate5",
+    "H9": "SGNex_H9_directRNA_replicate2",
+    "HEYA8": "SGNex_HEYA8_directRNA_replicate1",
+    "Hct116": "SGNex_Hct116_directRNA_replicate3",
+    "HepG2": "SGNex_HepG2_directRNA_replicate5",
+    "K562": "SGNex_K562_directRNA_replicate4",
+    "MCF7": "SGNex_MCF7_directRNA_replicate3"
+  },
+  "confirmation_replicates": {
+    "A549": [
+      "SGNex_A549_directRNA_replicate6"
+    ],
+    "H9": [
+      "SGNex_H9_directRNA_replicate3",
+      "SGNex_H9_directRNA_replicate4"
+    ],
+    "HEYA8": [
+      "SGNex_HEYA8_directRNA_replicate2",
+      "SGNex_HEYA8_directRNA_replicate3"
+    ],
+    "Hct116": [
+      "SGNex_Hct116_directRNA_replicate4"
+    ],
+    "HepG2": [
+      "SGNex_HepG2_directRNA_replicate6"
+    ],
+    "K562": [
+      "SGNex_K562_directRNA_replicate5",
+      "SGNex_K562_directRNA_replicate6"
+    ],
+    "MCF7": [
+      "SGNex_MCF7_directRNA_replicate4"
+    ]
+  },
+  "shared_positions": "Same transcript coordinate and seven-mer, with at least two observed biological replicates in every cell. Shared candidates additionally require all declared biological replicates and every replicate score at least 0.5.",
+  "examples": "Use matched_replicates positions with a score in the lowest-numbered biological replicate of each cell (discovery) and at least one remaining replicate (confirmation). Require at least 3 qualifying positions per transcript. Rank the absolute signed mean discovery contrast, then site count; select 3 distinct genes without using confirmation scores in ranking. Confirmation is the equal mean of remaining replicates at each same position. All candidates and qualifying positions are saved.",
+  "interpretation": "Scores predict binary m6A site labels; they are not molecular modification fractions. Technical runs are grouped within biological replicates. Hct116 replicate 3/run 1 overlaps Dataset 0 training measurements.",
+  "analysis_elapsed_seconds": 84.017
+}

@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checks": [
+    "Complete score/depth matrices align; no missing or out-of-range scores.",
+    "High-support, discordance and strict-restriction counts match individual sample scores.",
+    "Signal pairs are distinct, sequence-identical, depth-matched and correctly grouped; all contributing runs have equal weight.",
+    "Metagene denominators and gene-matched weights conserve eligible and candidate totals.",
+    "Gene representatives are selected without scores and burden ranks give cells equal weight.",
+    "Overlap-run sensitivity reproduces all six original contrasts and accounts for coordinate turnover."
+  ],
+  "verified_counts": {
+    "common_positions": 26024,
+    "biological_samples": 17,
+    "shared_high": 181,
+    "strict_restricted": 18,
+    "matched_signal_pairs": 5316,
+    "signal_run_sites": 13482,
+    "scientific_figures": 0,
+    "report_figures": 0
+  },
+  "source_sha256": {
+    "analyze.py": "d9db9fbad4917b0705a800b97b00525541c4c3c8852dce4aaacb6e0632a13b1f",
+    "comparisons.py": "7749e9987bb03963be33d0882212d3901d25a1643e3d2abb144d21f42ea16c93",
+    "evidence.py": "fcb8ec1b9276c840ffa2296b0874362796ce84a09aa82398b23ecf42c541d2a8",
+    "explore.py": "da2d4eb5602e8ecd66b98ca65d47c8abcbeaf922bf3e32a12dacb2263c434f5f",
+    "scientific_figures.py": "e9337743727f55658440279b339e4174bf4551df3eb7403964f5618ae65f93fe",
+    "report_panels.py": "a45d97c53766178a3dedd1c5121cbc2014164184b3b0956adf55a7817058710f",
+    "questions.py": "6ae4e971f7c0ad43912afeb60ec6339885c60cb9bd285d65ba0142a592bc350c",
+    "REFERENCES.md": "9504b3d512af41c85c5d2b9953350acb8c58ddfae5098ff881324617b08ad5d9",
+    "exploration_checks.py": "ef639e78a66b32505e817d3283654d3ca026434c20c29ce70fb26313b87aa8e7",
+    "audit_analysis.py": "96fac95fb08aeaea1c17f08348fa6cef424eb9b83dbf84404840eda257dd8cc9"
+  }
+}

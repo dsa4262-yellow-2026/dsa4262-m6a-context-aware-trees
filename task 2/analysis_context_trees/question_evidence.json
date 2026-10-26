@@ -1,0 +1,119 @@
+[
+  {
+    "topic": "Site availability",
+    "question": "Which sites are observed in every biological replicate?",
+    "answer": "Each replicate has 66,382–259,535 eligible sites; 26,024 are observed in all 17.",
+    "interpretation": "Use the common sites for sharing and gene-level fractions, and sites matched by read coverage for cell-line contrasts.",
+    "figure": "01_observation_and_denominators",
+    "tables": [
+      "tables/sample_support.csv",
+      "tables/depth_score_association.csv"
+    ]
+  },
+  {
+    "topic": "Replicate agreement",
+    "question": "How reproducible are predictions within cell lines?",
+    "answer": "Median technical-run and biological-replicate correlations are 0.843 and 0.849. The nearest neighbour of 11/17 replicates belongs to the same cell line.",
+    "interpretation": "Rank agreement is substantial. Cell lines overlap in the correlation-based clustering.",
+    "figure": "02_similarity_and_replicates",
+    "tables": [
+      "tables/sample_correlations.csv",
+      "tables/nearest_samples.csv",
+      "tables/replicate_pairs_platform.csv"
+    ]
+  },
+  {
+    "topic": "Cell-line differences",
+    "question": "Do differences between cell lines exceed variation within cell lines?",
+    "answer": "17/21 contrasts have greater between-cell-line disagreement. The excess ranges from -0.0021 to +0.0035 score units.",
+    "interpretation": "The additional variation between cell lines is small. Each contrast uses the same sites for both quantities and treats biological replicates as the experimental units.",
+    "figure": "03_between_within_effects",
+    "tables": [
+      "cell_pairs.csv",
+      "cell_contrast_stability.csv"
+    ]
+  },
+  {
+    "topic": "Shared and restricted sites",
+    "question": "Which predicted modified sites recur across cell lines?",
+    "answer": "181 sites in 105 genes score ≥0.5 in all 17 replicates. Of 156 sites consistently predicted modified in exactly one cell line, 18 are consistently predicted unmodified in all other cell lines.",
+    "interpretation": "A restricted prediction requires agreement in both the selected cell line and the other six. Counts refer to transcript coordinates.",
+    "figure": "04_shared_and_restricted_sites",
+    "tables": [
+      "tables/site_states.parquet",
+      "tables/restricted_candidates.csv",
+      "tables/score_threshold_sensitivity.csv"
+    ]
+  },
+  {
+    "topic": "Signal features",
+    "question": "How do signal features differ after sequence and read-coverage matching?",
+    "answer": "Across 5,316 pairs in 51 replicate/motif groups, all group medians show lower central mean current and transformed dwell time at predicted modified sites. Signal standard deviation is higher for GAACT and lower for GGACT and AGACT.",
+    "interpretation": "Pairs have identical seven-mers and read-coverage ratios ≤2. Tightening the ratio to 1.25 retains 5,215 pairs and 51/51 negative current medians. These input-feature associations explain the model predictions.",
+    "figure": "06_matched_signal_features",
+    "tables": [
+      "tables/signal_sample_contrasts.csv",
+      "tables/signal_depth_match_sensitivity.csv",
+      "tables/signal_matching_support.csv"
+    ]
+  },
+  {
+    "topic": "Sequence",
+    "question": "How do predictions vary by central DRACH motif?",
+    "answer": "Predicted modified-site fractions differ across the 18 observed central motifs and seven cell lines.",
+    "interpretation": "Each motif has an explicit eligible-site denominator. Sequence is a model input; signal comparisons therefore match the full seven-mer.",
+    "figure": "05_motif_composition",
+    "tables": [
+      "tables/motif_summary.csv"
+    ]
+  },
+  {
+    "topic": "Transcript location",
+    "question": "Where are shared predictions located within transcripts?",
+    "answer": "142/181 shared sites (78.5%) are in 3′ UTRs, compared with 38.0% of eligible sites and 46.6% of the background with matching gene contributions. Of 170 shared sites with coding and stop annotations, 168 lie in the last exon.",
+    "interpretation": "Relative-position and landmark plots use observed eligible sites as denominators. Location features contribute to these model-predicted patterns.",
+    "figure": "08_transcript_topology",
+    "tables": [
+      "tables/metagene_bins.csv",
+      "region_by_gene.csv",
+      "tables/anchor_profiles.csv",
+      "tables/last_exon_support.csv"
+    ]
+  },
+  {
+    "topic": "Gene-level fractions",
+    "question": "Which genes have the highest fraction of predicted modified sites?",
+    "answer": "Among 870 genes with ≥10 common sites, H2AFX ranks first at 39.7% across 19 eligible sites, followed by C19orf48 and MRPL14.",
+    "interpretation": "Select one transcript per gene by site availability, then average fractions with equal weight for replicates within each cell line and for cell lines. Rankings change with the minimum eligible-site count.",
+    "figure": "10_gene_burden",
+    "tables": [
+      "tables/gene_burden_ranking_min10.csv",
+      "tables/gene_burden_rank_sensitivity.csv",
+      "tables/gene_sample_burden.parquet"
+    ]
+  },
+  {
+    "topic": "Additional replicates",
+    "question": "Which local differences recur in additional biological replicates?",
+    "answer": "Direction is retained for 2,571/4,517 genes (56.9%) and 73/100 leading genes. For those 100 genes, the median initial magnitude is 0.123, compared with 0.040 in the initial direction in additional replicates.",
+    "interpretation": "Ranking uses initial-replicate scores. Coverage eligibility uses both subsets. Repeated direction often accompanies a smaller effect size.",
+    "figure": "11_discovery_and_confirmation",
+    "tables": [
+      "tables/gene_discovery_confirmation.csv",
+      "discovery_confirmation.csv",
+      "example_confirmation_pairs.csv"
+    ]
+  },
+  {
+    "topic": "Sensitivity",
+    "question": "Which findings persist after changing cutoffs or excluding the overlapping run?",
+    "answer": "There are 181, 18 and 0 shared sites at score cutoffs 0.5, 0.7 and 0.9. Higher read-coverage cutoffs mainly remove observations. Excluding Hct116 replicate 3 run 1 retains all 181 shared sites among 25,962 common sites, while two of six affected cell-line contrasts change sign on identical retained sites.",
+    "interpretation": "The shared-site result is stable to this run exclusion; the small cell-line contrasts are more sensitive. Run 4 from the same biological replicate remains included.",
+    "figure": "15_threshold_robustness",
+    "tables": [
+      "threshold_stability.csv",
+      "tables/training_overlap_run_sensitivity.csv",
+      "tables/training_overlap_cell_contrasts.csv"
+    ]
+  }
+]

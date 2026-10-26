@@ -1,0 +1,4 @@
+score_threshold,all_cells_high,any_cell_high,exactly_one_high_cell,strictly_one_high_other_six_low,any_discordant
+0.5,181,679,156,18,811
+0.7,18,246,90,10,348
+0.9,0,3,3,0,8

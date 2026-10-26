@@ -1,0 +1,119 @@
+{
+  "analysis_version": "1.0",
+  "common_positions": 26024,
+  "eligible_biological_observations": 2569170,
+  "biological_samples": 17,
+  "cells": 7,
+  "runs": 23,
+  "same_cell_nearest_neighbors": 11,
+  "score_sensitivity": [
+    {
+      "score_threshold": 0.5,
+      "all_cells_high": 181,
+      "any_cell_high": 679,
+      "exactly_one_high_cell": 156,
+      "strictly_one_high_other_six_low": 18,
+      "any_discordant": 811
+    },
+    {
+      "score_threshold": 0.7,
+      "all_cells_high": 18,
+      "any_cell_high": 246,
+      "exactly_one_high_cell": 90,
+      "strictly_one_high_other_six_low": 10,
+      "any_discordant": 348
+    },
+    {
+      "score_threshold": 0.9,
+      "all_cells_high": 0,
+      "any_cell_high": 3,
+      "exactly_one_high_cell": 3,
+      "strictly_one_high_other_six_low": 0,
+      "any_discordant": 8
+    }
+  ],
+  "gene_burden_genes_min10": 870,
+  "representative_transcript_genes": 1193,
+  "metagene_eligible": 24356,
+  "metagene_shared": 170,
+  "metagene_excluded": 1668,
+  "signal": {
+    "matched_pairs": 5316,
+    "run_sites": 13482,
+    "sample_motif_groups": 51,
+    "max_pairs_per_sample_motif": 200,
+    "motifs": [
+      "GGACT",
+      "GAACT",
+      "AGACT"
+    ],
+    "seed": 4262
+  },
+  "overlap_sensitivity": [
+    {
+      "score_threshold": 0.5,
+      "original_common": 26024,
+      "retained_common": 25962,
+      "original_shared": 181,
+      "original_shared_on_retained": 181,
+      "without_overlap_shared": 181,
+      "lost_observation": 0,
+      "lost_score": 0,
+      "gained_score": 0,
+      "hct116_rep3_mean_absolute_change": 0.010189648161351305
+    },
+    {
+      "score_threshold": 0.7,
+      "original_common": 26024,
+      "retained_common": 25962,
+      "original_shared": 18,
+      "original_shared_on_retained": 18,
+      "without_overlap_shared": 18,
+      "lost_observation": 0,
+      "lost_score": 0,
+      "gained_score": 0,
+      "hct116_rep3_mean_absolute_change": 0.010189648161351305
+    },
+    {
+      "score_threshold": 0.9,
+      "original_common": 26024,
+      "retained_common": 25962,
+      "original_shared": 0,
+      "original_shared_on_retained": 0,
+      "without_overlap_shared": 0,
+      "lost_observation": 0,
+      "lost_score": 0,
+      "gained_score": 0,
+      "hct116_rep3_mean_absolute_change": 0.010189648161351305
+    }
+  ],
+  "discovery_genes": 4517,
+  "discovery_retained": 2571,
+  "top100_retained": 73,
+  "interpretation": "Descriptive comparisons of predicted m6A site scores and signal features; biological replicates are the experimental units.",
+  "sample_eligible_min": 66382,
+  "sample_eligible_max": 259535,
+  "common_high_fraction_min": 0.0144097755917614,
+  "common_high_fraction_max": 0.0346218874884721,
+  "depth_rho_min": 0.1461118868365777,
+  "depth_rho_max": 0.2835418026835968,
+  "technical_rho_median": 0.8427426915709328,
+  "biological_rho_median": 0.8490351615156968,
+  "technical_mae_median": 0.0216159798332606,
+  "biological_mae_median": 0.0199416147664247,
+  "positive_cell_pairs": 17,
+  "cell_pairs": 21,
+  "cell_excess_min": -0.0021331025677191,
+  "cell_excess_max": 0.003509253167426,
+  "signal_current_negative_groups": 51,
+  "signal_dwell_negative_groups": 51,
+  "tight_signal_pairs": 5215,
+  "tight_signal_groups": 51,
+  "tight_current_negative_groups": 51,
+  "tight_dwell_negative_groups": 51,
+  "top_gene": "H2AFX",
+  "top_gene_fraction": 0.3972431077694235,
+  "top_gene_positions": 19,
+  "top100_discovery_median": 0.1231960853330182,
+  "top100_aligned_confirmation_median": 0.0396416201631956
+}

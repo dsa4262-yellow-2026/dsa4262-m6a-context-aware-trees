@@ -1,0 +1,18 @@
+replicate_id,cell_line,platform,label
+SGNex_K562_directRNA_replicate6,K562,GridION,K562 r6
+SGNex_K562_directRNA_replicate4,K562,GridION,K562 r4
+SGNex_K562_directRNA_replicate5,K562,GridION,K562 r5
+SGNex_A549_directRNA_replicate5,A549,MinION,A549 r5
+SGNex_H9_directRNA_replicate3,H9,GridION,H9 r3
+SGNex_H9_directRNA_replicate2,H9,GridION,H9 r2
+SGNex_H9_directRNA_replicate4,H9,GridION,H9 r4
+SGNex_HEYA8_directRNA_replicate3,HEYA8,GridION,HEYA8 r3
+SGNex_HEYA8_directRNA_replicate1,HEYA8,GridION,HEYA8 r1
+SGNex_HEYA8_directRNA_replicate2,HEYA8,GridION,HEYA8 r2
+SGNex_A549_directRNA_replicate6,A549,GridION,A549 r6
+SGNex_Hct116_directRNA_replicate3,Hct116,GridION,Hct116 r3
+SGNex_Hct116_directRNA_replicate4,Hct116,GridION,Hct116 r4
+SGNex_HepG2_directRNA_replicate5,HepG2,MinION,HepG2 r5
+SGNex_HepG2_directRNA_replicate6,HepG2,GridION,HepG2 r6
+SGNex_MCF7_directRNA_replicate3,MCF7,MinION,MCF7 r3
+SGNex_MCF7_directRNA_replicate4,MCF7,GridION,MCF7 r4
